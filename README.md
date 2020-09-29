@@ -23,3 +23,7 @@ design du composant de login
 ## Etape 6
 
 Personnal navigation style
+
+## Etape 7
+
+creation du store
