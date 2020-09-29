@@ -13,7 +13,7 @@ import {
   Text,
 } from 'react-native';
 import Login from './components/Login';
-
+import Home from './components/Home';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -26,9 +26,9 @@ class App extends React.Component {
   }
   render() {
     return (
-      <>
-        <Text>{JSON.stringify(this.state)}</Text>
-        <Login onAuthentPress={this.authent} />
+      <>{undefined===this.state.whoiam?
+        <Login onAuthentPress={this.authent} />:
+        <Home userName={this.state.whoiam}/>}
       </>
     );
   }

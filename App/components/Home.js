@@ -1,18 +1,13 @@
 import React, { Component } from 'react'
 import { Text, View } from 'react-native'
 
-class Home extends Component {
-    constructor(props)
-    {
-        super(props);
-    }
-  render() {
+function Home(props) {
     return (
-      <View>
-        <Text> textInComponent </Text>
-      </View>
+        <View>
+            <Text> {JSON.stringify(props)}</Text>
+        </View>
     )
-  }
+
 }
 
-export default componentName
+export default Home
