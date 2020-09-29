@@ -15,3 +15,7 @@ Vidange du projet
 ## Etape 4
 
 design du composant de login
+
+## Etape 5
+
+2 way binding

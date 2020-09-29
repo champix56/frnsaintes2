@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, Image } from 'react-native';
 
 export default function Login() {
+    const [logstate, setlogstate] = useState({ login: '', pass: '' });
     return (
         <View style={styles.mainView}>
             <View>
@@ -9,10 +10,11 @@ export default function Login() {
             </View>
             <View style={styles.container}>
                 <Text>Authentification</Text>
-                <TextInput style={styles.inputs} placeholder="Login" />
-                <TextInput style={styles.inputs} placeholder="password" secureTextEntry={true} />
+                <TextInput style={styles.inputs} placeholder="Login" value={logstate.login} onChangeText={(text)=>{setlogstate({...logstate, login: text})}} />
+                <TextInput style={styles.inputs} placeholder="password" secureTextEntry={true} value={logstate.pass} onChangeText={(text)=>{setlogstate({...logstate, pass: text})}} />
                 <Button title="Connexion" />
             </View>
+            <Text>logstate:{JSON.stringify(logstate)}</Text>
         </View>
     );
 }
