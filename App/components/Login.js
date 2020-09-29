@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, Image } from 'react-native';
-
-export default function Login() {
+import PropTypes from 'prop-types';
+export default function Login(props) {
     const [logstate, setlogstate] = useState({ login: '', pass: '' });
     return (
         <View style={styles.mainView}>
@@ -12,7 +12,7 @@ export default function Login() {
                 <Text>Authentification</Text>
                 <TextInput style={styles.inputs} placeholder="Login" value={logstate.login} onChangeText={(text)=>{setlogstate({...logstate, login: text})}} />
                 <TextInput style={styles.inputs} placeholder="password" secureTextEntry={true} value={logstate.pass} onChangeText={(text)=>{setlogstate({...logstate, pass: text})}} />
-                <Button title="Connexion" />
+                <Button title="Connexion" onPress={()=>{props.onAuthentPress(logstate.login, logstate.pass)}} />
             </View>
             <Text>logstate:{JSON.stringify(logstate)}</Text>
         </View>
@@ -37,3 +37,6 @@ const styles = StyleSheet.create({
         marginBottom: 20
     }
 })
+Login.propsTypes={
+    onAuthentPress:PropTypes.func.isRequired
+}

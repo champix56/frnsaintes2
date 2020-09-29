@@ -14,12 +14,25 @@ import {
 } from 'react-native';
 import Login from './components/Login';
 
-const App = () => {
-  return (
-      <Login/>
-  );
-};
-
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { whoiam: undefined }
+  }
+  authent = (login,pass) => {
+    if (login === 'Alex' && pass === 'alex') {
+      this.setState({ whoiam: login })
+    }
+  }
+  render() {
+    return (
+      <>
+        <Text>{JSON.stringify(this.state)}</Text>
+        <Login onAuthentPress={this.authent} />
+      </>
+    );
+  }
+}
 const styles = StyleSheet.create({
 
 });
