@@ -31,3 +31,8 @@ creation du store
 ## Etape 8
 
 connexion au state du store
+
+## Etape 9
+
+passage des actions par le store redux
+

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, Image } from 'react-native';
 import PropTypes from 'prop-types';
+import store from '../reducers/reducer';
 export default function Login(props) {
     const [logstate, setlogstate] = useState({ login: '', pass: '' });
     return (
@@ -12,7 +13,7 @@ export default function Login(props) {
                 <Text>Authentification</Text>
                 <TextInput style={styles.inputs} placeholder="Login" value={logstate.login} onChangeText={(text)=>{setlogstate({...logstate, login: text})}} />
                 <TextInput style={styles.inputs} placeholder="password" secureTextEntry={true} value={logstate.pass} onChangeText={(text)=>{setlogstate({...logstate, pass: text})}} />
-                <Button title="Connexion" onPress={()=>{props.onAuthentPress(logstate.login, logstate.pass)}} />
+                <Button title="Connexion" onPress={()=>{store.dispatch({type:'LOGIN',value:{login:logstate.login,password: logstate.pass}})}} />
             </View>
             <Text>logstate:{JSON.stringify(logstate)}</Text>
         </View>

@@ -28,14 +28,15 @@ class App extends React.Component {
   componentDidMount(){
     store.subscribe(()=>{
       storeState=store.getState();
-      this.setState({...this.state, storeState});
+      this.setState({...this.state, ...storeState});
     })
   }
   render() {
     return (
-      <>{undefined===this.state.whoiam?
-        <Login onAuthentPress={this.authent} />:
-        <Home userName={this.state.whoiam}/>}
+      <>
+      {undefined===this.state.whoiam?
+        <Login />:
+        <Home />}
       </>
     );
   }
