@@ -11,3 +11,7 @@ configuration de l'execution vscode
 ## Etape 3
 
 Vidange du projet
+
+## Etape 4
+
+design du composant de login

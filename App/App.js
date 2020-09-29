@@ -12,11 +12,12 @@ import {
   View,
   Text,
 } from 'react-native';
+import Login from './components/Login';
 
 const App = () => {
   return (
     <>
-      <View><Text>Hello</Text></View>
+      <Login/>
     </>
   );
 };
