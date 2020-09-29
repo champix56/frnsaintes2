@@ -27,3 +27,7 @@ Personnal navigation style
 ## Etape 7
 
 creation du store
+
+## Etape 8
+
+connexion au state du store

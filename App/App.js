@@ -14,6 +14,7 @@ import {
 } from 'react-native';
 import Login from './components/Login';
 import Home from './components/Home';
+import store from './reducers/reducer';
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -23,6 +24,12 @@ class App extends React.Component {
     if (login === 'Alex' && pass === 'alex') {
       this.setState({ whoiam: login })
     }
+  }
+  componentDidMount(){
+    store.subscribe(()=>{
+      storeState=store.getState();
+      this.setState({...this.state, storeState});
+    })
   }
   render() {
     return (
