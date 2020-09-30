@@ -36,3 +36,7 @@ connexion au state du store
 
 passage des actions par le store redux
 
+## Etape 10 
+
+creation de composants pour la page à venir
+
