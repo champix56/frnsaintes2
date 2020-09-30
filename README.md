@@ -51,3 +51,7 @@ coorection des sources d'images
 ## Etape 13
 
 gestion des keys pour les maps
+
+## Etape 14
+
+Selection du produit pour d'autres composants

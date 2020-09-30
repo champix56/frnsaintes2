@@ -1,15 +1,17 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, Pressable } from 'react-native';
 import PropTypes from 'prop-types';
 export default function SmallProduct(props) {
     // const imgpath='../../img/produits/'+props.product.img;
     // console.log(imgpath);
     return (
-        <View style={{...styles.container,...props.style}} onPress={()=>{props.onPress(props.product)}}>
+        <View style={{...styles.container,...props.style}} >
+        <Pressable onPress={props.onPress}>
         {/* <Text>{'../../img/produits/'+props.product.img}</Text> */}
             <Image style={styles.image} source={{uri:props.product.img}} />
             <Text style={styles.text}>{props.product.name}</Text>
             {/* <Text style={styles.text}>{props.product.img}</Text> */}
+            </Pressable>
         </View>
     );
 }

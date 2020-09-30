@@ -19,7 +19,7 @@ componentDidMount(){
     return (
       <View style={{height:'100%'}}>
         <Text> Caisse </Text>
-        <Text>{JSON.stringify(store.getState())}</Text>
+        {/* <Text>{JSON.stringify(store.getState().selectedProduct)}</Text> */}
         <ProductList style={{height:'33%'}}/>
         <Ticket lines={this.state.ticket.lines}/>
         
