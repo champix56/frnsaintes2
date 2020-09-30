@@ -5,13 +5,7 @@ export default function BrocCartItem(props) {
         <View>
             <Button title="Ajouter panier" />
             <View style={[styles.row, { marginLeft: 15, marginTop: 8, }]}>
-                <Text style={[styles.lowprice, { marginLeft: 35, marginTop: 15, height: 50, width: 70, textAlign: 'right', fontSize: 14 }]}>quant :</Text>
-                <TextInput
-                    style={[
-                        styles.lowprice,
-                        { marginLeft: 10, marginTop: 5, height: 50, width: 70, textAlign: 'right' },
-                    ]}
-                    value={'1'}/>
+               <Image source={{uri:''}}/>
             </View>
             <View>
                 <View style={[styles.row,]}>
@@ -19,14 +13,15 @@ export default function BrocCartItem(props) {
                     {/* <Text style={[ styles.lowprice,{ marginLeft: 105, marginTop: 15, height: 50, width: 70, textAlign: 'right', fontSize:14 }]}>quant :</Text> */}
                 </View>
                 <View style={[styles.row]}>
-                    <TextInput
+                <Text>Prix initial</Text>
+                    <Text
                         style={[
                             styles.cell,
-                            styles.price,
                             { width: 200, textAlign: 'right' },
-                        ]} value={'34'}/>
+                        ]} >34</Text>
                 </View>
                 <View style={[styles.row]}>
+                <Text>Prix de vente</Text>
                     <TextInput
                         style={[
                             styles.cell,
