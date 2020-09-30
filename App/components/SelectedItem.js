@@ -1,5 +1,5 @@
 import React, {  } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Color } from 'react-native';
+import { View, Text, TextInput, Button, StyleSheet, Image } from 'react-native';
 export default function BrocCartItem(props) {
     return (
         <View>
