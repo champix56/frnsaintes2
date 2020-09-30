@@ -1,5 +1,8 @@
+import { ActionSheetIOS } from 'react-native';
 import {createStore} from 'redux';
-const initialState={produits:[
+const initialState={
+    selectedProduct:{},
+    produits:[
     {id:1,
         name: 'beurre breton salé',
         prixunitaire: 2.5,
@@ -23,6 +26,7 @@ const initialState={produits:[
     }
 ], whoiam: undefined}
 function reducer(state=initialState,action){
+    console.log('reducer called',action)
     switch (action.type) {
         case 'LOGIN':
             if(action.value.login==='Alex' && action.value.password==='alex')
@@ -32,6 +36,8 @@ function reducer(state=initialState,action){
             else return state;
         case 'LOGOUT': return {...initialState, whoami: undefined}
         case 'ADD_PRODUCT': return {...state, produits:[...state.produits, action.value]}
+        case 'SELECT_PRODUCT':
+            return {...state, selectedProduct:action.value}
         default:
             return state
     }

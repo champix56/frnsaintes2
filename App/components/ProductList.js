@@ -9,7 +9,10 @@ export default function ProductList(props) {
     <Text>Produits</Text>
         {
             store.getState().produits.map((element,indice)=>{
-                return <SmallProduct product={element} key={'prod-'+indice}
+                return <SmallProduct onPress={()=>{
+                    console.log('small called')
+                    store.dispatch({type:'SELECT_PRODUCT', value:element});
+                }} product={element} key={'prod-'+indice}
                 />
             }) 
         }

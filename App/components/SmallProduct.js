@@ -5,7 +5,7 @@ export default function SmallProduct(props) {
     // const imgpath='../../img/produits/'+props.product.img;
     // console.log(imgpath);
     return (
-        <View style={{...styles.container,...props.style}} onPress={props.onPress}>
+        <View style={{...styles.container,...props.style}} onPress={()=>{props.onPress(props.product)}}>
         {/* <Text>{'../../img/produits/'+props.product.img}</Text> */}
             <Image style={styles.image} source={{uri:props.product.img}} />
             <Text style={styles.text}>{props.product.name}</Text>
