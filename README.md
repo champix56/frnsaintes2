@@ -44,3 +44,6 @@ creation de composants pour la page à venir
 
 Creation d'un module de caisse avec parcours d'array
 
+## Etape 12
+
+coorection des sources d'images
