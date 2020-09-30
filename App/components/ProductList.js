@@ -9,7 +9,8 @@ export default function ProductList(props) {
     <Text>Produits</Text>
         {
             store.getState().produits.map((element,indice)=>{
-                return <><SmallProduct product={element}/></>
+                return <SmallProduct product={element} key={'prod-'+indice}
+                />
             }) 
         }
      </ScrollView>

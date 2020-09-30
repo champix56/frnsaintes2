@@ -47,3 +47,7 @@ Creation d'un module de caisse avec parcours d'array
 ## Etape 12
 
 coorection des sources d'images
+
+## Etape 13
+
+gestion des keys pour les maps
