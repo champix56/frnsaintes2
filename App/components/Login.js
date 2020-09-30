@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TextInput, Button, Image } from 'react-native';
 import PropTypes from 'prop-types';
 import store from '../reducers/reducer';
 export default function Login(props) {
-    const [logstate, setlogstate] = useState({ login: '', pass: '' });
+    const [logstate, setlogstate] = useState({ login: 'Alex', pass: 'alex' });
     return (
         <View style={styles.mainView}>
             <View>

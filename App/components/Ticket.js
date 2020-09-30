@@ -6,7 +6,7 @@ export default function Ticket(props) {
     props.lines.forEach((item) => { total += item.price })
     return (
         <View>
-            {props.map(e => {
+            {props.lines.map(e => {
                 return <View><Text>{e.name};{e.price}</Text></View>
             })}
         </View>

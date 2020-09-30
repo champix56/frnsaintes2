@@ -40,3 +40,7 @@ passage des actions par le store redux
 
 creation de composants pour la page à venir
 
+## Etape 11
+
+Creation d'un module de caisse avec parcours d'array
+
