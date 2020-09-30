@@ -8,7 +8,7 @@ export default function BrocCartItem(props) {
                 <Text style={[styles.lowprice, { marginLeft: 35, marginTop: 15, height: 50, width: 70, textAlign: 'right', fontSize: 14 }]}>quant :</Text>
                 <TextInput
                     style={[
-                        brocStylesheet.lowprice,
+                        styles.lowprice,
                         { marginLeft: 10, marginTop: 5, height: 50, width: 70, textAlign: 'right' },
                     ]}
                     value={'1'}/>
@@ -16,23 +16,23 @@ export default function BrocCartItem(props) {
             <View>
                 <View style={[styles.row,]}>
 
-                    {/* <Text style={[ brocStylesheet.lowprice,{ marginLeft: 105, marginTop: 15, height: 50, width: 70, textAlign: 'right', fontSize:14 }]}>quant :</Text> */}
+                    {/* <Text style={[ styles.lowprice,{ marginLeft: 105, marginTop: 15, height: 50, width: 70, textAlign: 'right', fontSize:14 }]}>quant :</Text> */}
                 </View>
                 <View style={[styles.row]}>
                     <TextInput
                         style={[
                             styles.cell,
-                            brocStylesheet.price,
+                            styles.price,
                             { width: 200, textAlign: 'right' },
-                        ]}/>
+                        ]} value={'34'}/>
                 </View>
                 <View style={[styles.row]}>
                     <TextInput
                         style={[
                             styles.cell,
-                            brocStylesheet.price,
+                            styles.price,
                             { width: 200, textAlign: 'right', marginTop: 50 },
-                        ]}/>
+                        ]} value={'21'}/>
                 </View>
             </View>
         </View>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
         textAlign: 'right',
         borderColor: 'black',
         borderWidth: 1,
-        position: "absolute",
+        //position: "absolute",
         right: 0,
     },
     lowprice: {
